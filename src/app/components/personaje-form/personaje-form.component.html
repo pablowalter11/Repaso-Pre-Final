@@ -1,0 +1,46 @@
+<fieldset>
+    <legend>Agregá un Personaje:</legend>
+    <form [formGroup]="form" (ngSubmit)="addPj()">
+
+        <label>Nombre:</label>
+        <input type="text" formControlName="nombre">
+        <div *ngIf="form.controls['nombre'].getError('required') && form.controls['nombre'].touched">
+            <div>Campo Requerido</div>
+        </div>
+
+        <label>
+            <input type="radio" formControlName="saga" value="Mortal Kombat">Mortal Kombat
+        </label>
+        <label>
+            <input type="radio" formControlName="saga" value="Street Fighter">Street Fighter
+        </label>
+        <label>
+            <input type="radio" formControlName="saga" value="Tekken">Tekken
+        </label>
+        <label>
+            <input type="radio" formControlName="saga" value="The King Of Fighter">The King Of Fighter
+        </label>
+
+        <div *ngIf="form.controls['saga'].getError('required') && form.controls['nombre'].touched">
+            <div>Campo Requerido</div>
+            <div *ngIf="form.controls['saga'].getError('sagaDisponible')">
+                <div>No se pueden cargar personajes de The King Of Fighter</div>
+            </div>
+        </div>
+
+        <select name="" id="" formControlName="primera_aparicion">
+            <option value="" disabled selected>Elige cual es el primer juego que apareció</option>
+            <option value=" 1">1</option>
+            <option value=" 2">2</option>
+            <option value=" 3">3</option>
+            <option value=" 4">4</option>
+        </select>
+
+        <div *ngIf="form.controls['primera_aparicion'].getError('required') && 
+                    form.controls['primera_aparicion'].touched">
+            <div>Campo Requerido</div>
+        </div>
+
+        <button type="submit">Agregar</button>
+    </form>
+</fieldset>

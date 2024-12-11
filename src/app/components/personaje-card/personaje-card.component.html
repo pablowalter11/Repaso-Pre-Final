@@ -1,0 +1,6 @@
+<div>
+    <p>--|- {{pj.nombre}} -|--</p>
+    <button [routerLink]="['/detail/',pj.id]">Ver Detalles</button>
+    <button [routerLink]="['/update/',pj.id]">Actualizar</button>
+    <button (click)="deletePersonaje(pj.id)">Eliminar</button>
+</div>

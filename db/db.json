@@ -1,0 +1,16 @@
+{
+  "personajes": [
+    {
+      "id": "7181",
+      "nombre": "Kung Lao",
+      "saga": "Mortal Kombat",
+      "primera_aparicion": "Mortal Kombat 2"
+    },
+    {
+      "nombre": "Reptile",
+      "saga": "Mortal Kombat",
+      "primera_aparicion": " 1",
+      "id": "0e74"
+    }
+  ]
+}
